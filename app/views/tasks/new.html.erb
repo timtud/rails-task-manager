@@ -1,0 +1,14 @@
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+<hr>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+<hr>
+  <%= f.label :priority %>
+  Low<%= range_field(:priority, in: 1..5, step: 1) %>High
+  <div id='target'></div>
+
+<hr>
+  <%= f.submit %>
+<% end %>
